@@ -3,13 +3,13 @@ import { UserService } from './user.service';
 import { CreateUserInput } from './dto/create-user.input';
 import { UpdateUserInput } from './dto/update-user.input';
 
-@Resolver('User')
+@Resolver('api/user')
 export class UserResolver {
   constructor(private readonly userService: UserService) {}
 
-  @Mutation('createUser')
+  @Mutation('add')
   create(@Args('createUserInput') createUserInput: CreateUserInput) {
-    return this.userService.create(createUserInput);
+    return this.userService.createUser(createUserInput);
   }
 
   @Query('user')
@@ -18,17 +18,17 @@ export class UserResolver {
   }
 
   @Query('user')
-  findOne(@Args('id') id: number) {
+  findOne(@Args('id') id: string) {
     return this.userService.findOne(id);
   }
 
-  @Mutation('updateUser')
-  update(@Args('updateUserInput') updateUserInput: UpdateUserInput) {
-    return this.userService.update(updateUserInput.id, updateUserInput);
-  }
+  // @Mutation('updateUser')
+  // update(@Args('updateUserInput') updateUserInput: UpdateUserInput) {
+  //   return this.userService.update(updateUserInput.id, updateUserInput);
+  // }
 
   @Mutation('removeUser')
-  remove(@Args('id') id: number) {
+  remove(@Args('id') id: string) {
     return this.userService.remove(id);
   }
 }
