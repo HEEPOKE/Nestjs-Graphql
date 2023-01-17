@@ -31,6 +31,7 @@
     "@nestjs/graphql": "^10.1.7",
     "@nestjs/mapped-types": "^1.2.0",
     "@nestjs/platform-express": "^9.0.0",
+    "@nestjs/sequelize": "^9.0.0",
     "@prisma/client": "^4.8.1",
     "apollo-server-express": "^3.11.1",
     "class-transformer": "^0.5.1",
@@ -41,6 +42,11 @@
     "rxjs": "^7.2.0"
   },
   "devDependencies": {
+    "@graphql-cli/codegen": "2.4.24",
+    "@graphql-cli/diff": "2.1.0",
+    "@graphql-cli/similar": "2.1.0",
+    "@graphql-codegen/typescript": "2.8.7",
+    "@graphql-codegen/typescript-resolvers": "2.7.12",
     "@nestjs/cli": "^9.0.0",
     "@nestjs/schematics": "^9.0.0",
     "@nestjs/testing": "^9.0.0",
@@ -53,6 +59,7 @@
     "eslint": "^8.0.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "graphql-cli": "4.1.0",
     "jest": "29.3.1",
     "prettier": "^2.3.2",
     "source-map-support": "^0.5.20",
@@ -61,13 +68,7 @@
     "ts-loader": "^9.2.3",
     "ts-node": "^10.0.0",
     "tsconfig-paths": "4.1.1",
-    "typescript": "^4.7.4",
-    "graphql-cli": "4.1.0",
-    "@graphql-cli/codegen": "2.4.24",
-    "@graphql-codegen/typescript": "2.8.7",
-    "@graphql-codegen/typescript-resolvers": "2.7.12",
-    "@graphql-cli/diff": "2.1.0",
-    "@graphql-cli/similar": "2.1.0"
+    "typescript": "^4.7.4"
   },
   "jest": {
     "moduleFileExtensions": [
