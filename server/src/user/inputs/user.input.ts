@@ -9,13 +9,13 @@ export class UserInput {
 @InputType()
 export class FindUserInput {
   @Field()
-  readonly _id: string;
+  readonly id: number;
 }
 
 @InputType()
 export class UpdateUserInput {
   @Field()
-  readonly _id: string;
+  readonly id: number;
 
   @Field()
   readonly email: string;
